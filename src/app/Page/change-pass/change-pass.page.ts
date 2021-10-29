@@ -35,6 +35,7 @@ export class ChangePassPage implements OnInit {
                   'userPassword': pass.value.new_pass
                 });
                 console.log("modifier avec succes");
+                this.route.navigate(['tabs/profile'])
               }else{
                 console.log("le nouveau mot de passe et l'ancien sont different");
               }

@@ -12,15 +12,9 @@ export class OublierPage implements OnInit {
 
   constructor(private route: Router, private auth: AngularFireAuth, private serv: ServiceService) { }
 
-  ngOnInit() {
-    this.auth.authState.subscribe(auth =>{
-      if(!auth){
-        this.route.navigate(['login']);
-      }
-    })
-  }
+  ngOnInit() {}
   tost(){
-    this.serv.presentToast("");
+    this.serv.presentToast("en cours d'implementation.....");
   }
 
 }
