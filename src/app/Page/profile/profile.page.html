@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]=true>
+  <ion-item class="center">
+    <img src="./assets/img.png" alt="" ><br>
+    
+  </ion-item>
+    <p class="ion-text-center">{{user.userName}}</p>
+
+    <p class="ion-text-center">Adresse email: {{user.userEmail}}</p>
+    <a href="change-pass">Modifier mon mot de passe</a>
+    <ion-item>
+      <ion-button color='danger' (click)="logout()">Deconnexion</ion-button>
+    </ion-item>
+</ion-content>

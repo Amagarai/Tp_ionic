@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+     <ion-grid>
+     <ion-row>
+            <ion-col>
+              <ion-card>
+               <ion-card-header>
+                 <ion-card-title>
+                   inscription
+                 </ion-card-title>
+               </ion-card-header>
+              </ion-card>  
+              <ion-card-content>
+                <form #form="ngForm" (ngSubmit)="register(form)">
+                 <ion-item lines="none">
+                    <ion-label position="floating">
+                       Pseudo
+                    </ion-label>
+                    <ion-input type="email" name="name" ngModel placeholder="Enter Username" >           
+                    </ion-input>
+                 </ion-item>
+                 <ion-item lines="none">
+                    <ion-label position="floating">
+                      Email
+                    </ion-label>
+                    <ion-input type="email" name="email" ngModel placeholder="Enter Username">           
+                    </ion-input>
+                 </ion-item>
+                 <ion-item lines="none">
+                    <ion-label position="floating">
+                      Mot de passe
+                    </ion-label>
+                    <ion-input type="password" name="password" ngModel placeholder="password">                     
+                    </ion-input>
+                 </ion-item>
+                 <ion-item lines="none">
+                  <ion-label position="floating">
+                     Mot de passe
+                  </ion-label>
+                  <ion-input type="password" name="con_pass" ngModel placeholder="password">                     
+                  </ion-input>
+               </ion-item>  
+                 <ion-button type="submit" color="primary" expand="block" >Login User</ion-button>
+               </form>
+               
+              </ion-card-content> 
+            </ion-col>
+     </ion-row>
+    </ion-grid>
+    <a href="login">J'ai un compte</a>
+</ion-content>

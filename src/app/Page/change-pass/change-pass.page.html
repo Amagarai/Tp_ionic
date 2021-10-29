@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>changePass</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid class="ion-text-center" >
+      <ion-row justify-content-center align-items-center>
+             <ion-col >
+               <ion-card>
+                <ion-card-header>
+                  <ion-card-title>
+                    <form #pass="ngForm" (ngSubmit)="updatePass(pass)">
+                      <ion-item lines="none">
+                        <ion-label position="floating">
+                           Mot de passe
+                        </ion-label>
+                        <ion-input type="password" name="old_pass" ngModel placeholder="password">                     
+                        </ion-input>
+                      </ion-item>
+                      <ion-item lines="none">
+                        <ion-label position="floating">
+                          Mot de passe
+                        </ion-label>
+                        <ion-input type="password" name="new_pass" ngModel placeholder="password">                     
+                        </ion-input>
+                      </ion-item>
+                      <ion-item lines="none">
+                        <ion-label position="floating">
+                          Confirmer mot de passe
+                        </ion-label>
+                        <ion-input type="password" name="conf_new" ngModel placeholder="password">                     
+                        </ion-input>
+                      </ion-item>
+                      <ion-button type="submit" >Confirmer</ion-button>
+                    </form>
+                  </ion-card-title>
+                </ion-card-header>
+               </ion-card>  
+             </ion-col>
+      </ion-row>
+     </ion-grid>
+</ion-content>

@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <p>Liste de tout les utilisateurs</p>
+  </ion-item>
+  <ion-grid style="height: 100%;">
+    <ion-row justify-content-center align-items-center style="height: 100%;">
+           <ion-col size="12" size-sm="10" offset-sm="1" size-md="8" offset-md="2" size-lg="6" offset-xl="4" >
+             <ion-card>
+              <ion-card-header>
+                <ion-card-title>
+                 <ion-list *ngFor="let item of items |async">
+                  <ion-item>
+                    <ion-label>{{item.userName}}</ion-label>
+                  </ion-item>
+                </ion-list>
+                </ion-card-title>
+              </ion-card-header>
+             </ion-card>   
+           </ion-col>
+    </ion-row>
+   </ion-grid>
+</ion-content>

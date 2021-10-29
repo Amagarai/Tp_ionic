@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>  
+    <ion-grid class="ion-text-center" >
+     <ion-row justify-content-center align-items-center>
+            <ion-col >
+              <ion-card>
+               <ion-card-header>
+                 <ion-card-title>
+                   User Login
+                 </ion-card-title>
+               </ion-card-header>
+              </ion-card>  
+              <ion-card-content>
+                <form #form="ngForm" (ngSubmit)="Verifi_log(form)">
+                 <ion-item lines="none">
+                    <ion-label position="floating">
+                      Email
+                    </ion-label>
+                    <ion-input type="email" name="email" ngModel placeholder="Enter Username">           
+                    </ion-input>
+                 </ion-item>
+                 <ion-item lines="none">
+                    <ion-label position="floating">
+                       Mot de passe
+                    </ion-label>
+                    <ion-input type="password" name="password" ngModel placeholder="password">                     
+                    </ion-input>
+                 </ion-item>  
+                 <ion-button type="submit" color="primary" expand="block" >Confirmer</ion-button>
+               </form>
+              </ion-card-content> 
+            </ion-col>
+     </ion-row>
+    </ion-grid>
+    <a href="oublier">mot de passe oublié!</a><br><br>
+    <a href="register">Creer un compte</a>
+</ion-content>
